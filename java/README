@@ -1,0 +1,6 @@
+how to run a jar in windows
+e.g.) java -jar ${jar} ${input_data} ${output_db} ${create_sql} ${insert_sql}
+e.g.) java -jar dist/h3test.jar sample/test.txt test.db sample/create.properties sample/insert.properties 
+
+how to see sqlite in windows
+download sqlite browser from ( http://sqlitebrowser.org/ )
