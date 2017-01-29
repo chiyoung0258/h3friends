@@ -6,5 +6,7 @@ how to see sqlite in windows
 download sqlite browser from ( http://sqlitebrowser.org/ )
 
 how to run a jar in python
-reference 
 - http://stackoverflow.com/questions/7372592/python-how-can-i-execute-a-jar-file-through-a-python-script
+
+how to read sqlite file in python
+- https://docs.python.org/2/library/sqlite3.html
