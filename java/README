@@ -4,3 +4,7 @@ e.g.) java -jar dist/h3test.jar sample/test.txt test.db sample/create.properties
 
 how to see sqlite in windows
 download sqlite browser from ( http://sqlitebrowser.org/ )
+
+how to run a jar in python
+reference 
+- http://stackoverflow.com/questions/7372592/python-how-can-i-execute-a-jar-file-through-a-python-script
