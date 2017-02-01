@@ -1,0 +1,28 @@
+apply plugin:'java'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+	compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.8.11.2'
+}
+
+
+jar {
+    from {
+        (configurations.runtime).collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    } {
+        exclude "META-INF/*.SF"
+        exclude "META-INF/*.DSA"
+        exclude "META-INF/*.RSA"
+    }	
+    
+    manifest {
+        attributes("Main-Class": "h3.utils.TextToSqlite" )
+    }
+}
+
