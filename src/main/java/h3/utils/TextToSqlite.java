@@ -1,7 +1,5 @@
 package h3.utils;
 
-
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,7 +10,6 @@ import java.sql.Statement;
 import java.util.logging.Logger;
 
 public class TextToSqlite {
-	
 	public static Logger logger = Logger.getLogger(TextToSqlite.class.getName());
 	String sourcefilename;
 	String targetfilename;
@@ -83,13 +80,13 @@ public class TextToSqlite {
 			stmt.executeUpdate(sql);
 			stmt.close();
 			conn.commit();
+			logger.info("Table STOCK Created.");
 		} catch (Exception e) {
-			e.printStackTrace();
-			System.exit(1);
+			logger.info("Table STOCK is already created.");
+			logger.warning(e.getMessage());
 		} finally {
 			if (fis != null) try {fis.close(); } catch(Exception e){e.printStackTrace();}
 		}
-		logger.info("Table STOCK Created.");
 	}
 	
 	public void insertSqlite(Connection conn, String record) {
